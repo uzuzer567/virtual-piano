@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Virtual piano</title>
+  <link rel="shortcut icon" href="./assets/piano.ico">
+</head>
+<body>
+    <div id="project" class="background">
+        <div class="fullscreen">
+            <header class="header">
+                <h1>Virtual Piano</h1>
+                <div class="header__line">
+                    <hr class="header__right_line">
+                    <hr class="header__left_line">
+                </div>
+            </header>
+            
+            <main class="main">
+                <div class="button__location">
+                    <span><button id="buttonNotes" class="button" default=true>Notes</button></span>
+                    <button id="buttonLetters" class="button">Letters</button>
+                </div>                
+                <div id="piano" class="piano">
+                    <div id="piano__white_location" class="piano__white_location">
+                        <div id="D" class="piano__white" data-letter="D" data-note="c"></div>
+                        <div id="F" class="piano__white" data-letter="F" data-note="d"></div>
+                        <div id="G" class="piano__white" data-letter="G" data-note="e"></div>
+                        <div id="H" class="piano__white" data-letter="H" data-note="f"></div>
+                        <div id="J" class="piano__white" data-letter="J" data-note="g"></div>
+                        <div id="K" class="piano__white" data-letter="K" data-note="a"></div>
+                        <div id="L" class="piano__white" data-letter="L" data-note="b"></div>
+                    </div>
+                    <div class="piano__blue_location">
+                        <div id="R" class="piano__blue" data-letter="R" data-note="c♯" onclick="playNote('./assets/audio/c♯.mp3')"></div>
+                        <div id="T" class="piano__blue" data-letter="T" data-note="d♯" onclick="playNote('./assets/audio/d♯.mp3')"></div>
+                        <div class="piano__none"></div>
+                        <div id="U" class="piano__blue" data-letter="U" data-note="f♯" onclick="playNote('./assets/audio/f♯.mp3')"></div>
+                        <div id="I" class="piano__blue" data-letter="I" data-note="g♯" onclick="playNote('./assets/audio/g♯.mp3')"></div>
+                        <div id="O" class="piano__blue" data-letter="O" data-note="a♯" onclick="playNote('./assets/audio/a♯.mp3')"></div>
+                    </div>
+                </div>
+            </main>
+    
+            <footer class="footer">
+                <div class="footer__line">
+                    <hr class="footer__right_line">
+                    <hr class="footer__left_line">
+                </div>
+                <div class="footer__location">
+                    <a class="footer__github" href="https://github.com/uzuzer567"><span><div class="footer__github_image"></div></span><span class="footer__github_name">github</span></a>
+                    <a class="footer__rss" href="https://rs.school/js/"><span><div class="footer__rss_image"></div></span><span class="footer__rss_name">'21</span></a>
+                </div>
+            </footer>
+        </div>
+        <button id="fullscreen" class="fullscreen_button"></button>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
